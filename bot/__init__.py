@@ -1,6 +1,6 @@
-﻿# bot/__init__.py
+# bot/__init__.py
 """Bot package for message parsing and command dispatching."""
 
-from .bot import Bot
+from .bot import run_bot
 
-__all__ = ["Bot"]
+__all__ = ["run_bot"]

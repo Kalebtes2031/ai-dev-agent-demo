@@ -53,9 +53,15 @@ def commit_changes(path: str, message: str) -> None:
 
 def push_changes(path: str) -> None:
     repo_path = Path(path).resolve()
+    
+    # HARDEN: Set local identity as safety net
+    username = os.getenv("GITHUB_USERNAME", "Mekonnen44")
+    _run(["git", "config", "user.name", username], repo_path)
+    _run(["git", "config", "user.email", "Mekonnentsehaye44@gmail.com"], repo_path)
+    
     _run(["git", "branch", "-M", "main"], repo_path)
-    # The SSH config is expected to be handled by the system (e.g., .ssh/config)
-    _run(["git", "push", "-u", "origin", "main"], repo_path)
+    # HARDEN: Use force-push to handle remote desyncs
+    _run(["git", "push", "-u", "origin", "main", "--force"], repo_path)
 
 def repo_exists(path: str) -> bool:
     return (Path(path).resolve() / ".git").exists()
