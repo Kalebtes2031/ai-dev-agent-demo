@@ -1,0 +1,18 @@
+services:
+  - type: worker
+    name: github-assistance-bot
+    runtime: docker
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: GITHUB_SSH_PRIVATE_KEY
+        sync: false
+      - key: GITHUB_USERNAME
+        sync: false
+      - key: GITHUB_SSH_ALIAS
+        value: github-mekonnen
+      - key: PROJECTS_ROOT
+        value: ai_dev_agent/projects
