@@ -1,4 +1,4 @@
-# 🤖 AI-Dev-Agent: Your Autonomous GitHub coding assistant
+﻿# 🤖 AI-Dev-Agent: Your Autonomous GitHub coding assistant
 
 [![Replit](https://img.shields.io/badge/Deployed%20on-Replit-blue?logo=replit&logoColor=white)](https://ai-dev-agent-demo--kalebayele2001.replit.app)
 [![OpenAI](https://img.shields.io/badge/Powered%20by-GPT--4o-green?logo=openai&logoColor=white)](https://openai.com/)
@@ -66,5 +66,5 @@ PROJECTS_ROOT=ai_dev_agent/projects
 
 ## 📜 License & Author
 
-Crafted with ❤️ by **Mekonnen44**.
+Crafted by **Kaleb Tesfaye**.
 Licensed under the [MIT License](LICENSE).
